@@ -10,6 +10,17 @@ public class Event {
     private String eventType;
     private LocalDateTime dateTime;
 
+    public Event() {
+    }
+
+    public Event(String title, String place, String speaker, String eventType, LocalDateTime dateTime) {
+        this.title = title;
+        this.place = place;
+        this.speaker = speaker;
+        this.eventType = eventType;
+        this.dateTime = dateTime;
+    }
+
     public long getId() {
         return id;
     }
@@ -56,5 +67,11 @@ public class Event {
 
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Event{id='%s' ,title='%s', place='%s', speaker='%s', eventType='%s', dateTime='%s'}",
+                id, title, place, speaker, eventType, dateTime);
     }
 }
