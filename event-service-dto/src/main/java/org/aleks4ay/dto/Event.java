@@ -1,8 +1,13 @@
 package org.aleks4ay.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
+@Entity
 public class Event {
+    @Id @GeneratedValue
     private long id;
     private String title;
     private String place;

@@ -11,18 +11,17 @@
 
     <artifactId>event-service-api</artifactId>
 
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.aleks4ay</groupId>
             <artifactId>event-service-dto</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
-
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
 
 </project>
