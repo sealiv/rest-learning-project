@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -34,8 +35,8 @@ public class EventServiceController {
         return eventService.getAllEvents();
     }
 
-    @GetMapping(path = "/search/{title}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Event> getAllEventsByTitle(@PathVariable(value = "title") String title) {
+    @GetMapping(path = "/getByTitle", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Event> getAllEventsByTitle(@PathParam(value = "title") String title) {
         return eventService.getAllEventsByTitle(title);
     }
 
